@@ -31,10 +31,20 @@ export default defineConfig({
         ]
       : []),
   ],
+  esbuild: {
+    tsconfigRaw: {
+      compilerOptions: {
+        jsx: "react-jsx",
+        target: "ES2022",
+        moduleResolution: "bundler",
+        allowImportingTsExtensions: true,
+        skipLibCheck: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "src"),
-      "@assets": path.resolve(import.meta.dirname, "..", "..", "attached_assets"),
     },
     dedupe: ["react", "react-dom"],
   },
@@ -48,9 +58,7 @@ export default defineConfig({
     strictPort: true,
     host: "0.0.0.0",
     allowedHosts: true,
-    fs: {
-      strict: true,
-    },
+    fs: { strict: true },
   },
   preview: {
     port,
