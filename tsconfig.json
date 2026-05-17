@@ -12,17 +12,10 @@
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
     "skipLibCheck": true,
-    "strict": false,
     "noImplicitAny": true,
-    "noImplicitThis": true,
     "strictNullChecks": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
     "alwaysStrict": true,
-    "useUnknownInCatchVariables": true,
-    "noEmitOnError": true,
     "types": ["node", "vite/client"],
     "paths": {
       "@/*": ["./src/*"]
